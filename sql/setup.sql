@@ -9,18 +9,16 @@ CREATE OR REPLACE TABLE customers (
     name STRING,
     email STRING,
     prefecture STRING COMMENT '都道府県',
-    registered_at TIMESTAMP_NTZ,
-    COMMENT = 'EC顧客マスタ'
-);
+    registered_at TIMESTAMP_NTZ
+) COMMENT = 'EC顧客マスタ';
 
 -- 商品マスタ
 CREATE OR REPLACE TABLE products (
     product_id INT AUTOINCREMENT,
     product_name STRING,
     category STRING,
-    price NUMBER(10,2),
-    COMMENT = 'EC商品マスタ'
-);
+    price NUMBER(10,2)
+) COMMENT = 'EC商品マスタ';
 
 -- 注文トランザクション
 CREATE OR REPLACE TABLE orders (
@@ -29,9 +27,8 @@ CREATE OR REPLACE TABLE orders (
     product_id INT,
     quantity INT,
     order_date DATE,
-    status STRING COMMENT 'completed / cancelled / pending',
-    COMMENT = 'EC注文トランザクション'
-);
+    status STRING COMMENT 'completed / cancelled / pending'
+) COMMENT = 'EC注文トランザクション';
 
 -- サンプルデータ: 商品
 INSERT INTO products (product_name, category, price) VALUES
@@ -61,3 +58,4 @@ INSERT INTO orders (customer_id, product_id, quantity, order_date, status) VALUE
     (1, 4, 1, '2025-03-01', 'completed'),
     (3, 3, 2, '2025-03-05', 'completed'),
     (4, 1, 1, '2025-03-10', 'completed');
+
