@@ -1,6 +1,6 @@
 ---
 name: data-quality-check
-description: "テーブルのデータ品質を診断する。Triggers: データ品質, 品質チェック, data quality, NULL率, ユニーク率"
+description: "テーブルのデータ品質を診断する。NULL率・ユニーク率・値の範囲をチェックし、OK/WARN/NG で判定する。ユーザーが「データ品質」「品質チェック」「data quality」「NULL多くない？」「カラムの分布を見たい」「このテーブル大丈夫？」「データの中身を確認して」「ユニーク率」「欠損チェック」のようにテーブルの健全性や中身の傾向を知りたがっている場合は、明示的に呼び出されなくてもこのスキルを使うこと。"
 tools:
   - snowflake_sql_execute
 ---
